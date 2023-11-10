@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o -o auto_change_wallpaper  /usr/local/lib/libgflags.a /usr/lib/x86_64-linux-gnu/libcurl.so 
