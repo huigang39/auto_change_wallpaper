@@ -6,7 +6,7 @@ ACW 是一个能够跨平台(Linux Windwos MacOS)自动化更换壁纸的 CLI �
 
 ## 功能
 
-1. acw --get [label/url]
+1. acw --url [label/url]
     获取网络壁纸并保存到本地
 2. acw --add [label] [url]
     添加自动刷新壁纸的 API 接口
