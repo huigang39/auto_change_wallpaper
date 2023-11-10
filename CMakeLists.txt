@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(gflags REQUIRED)
 find_package(CURL REQUIRED)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/getImage.cpp)
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 
