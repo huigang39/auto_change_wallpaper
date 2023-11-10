@@ -178,6 +178,7 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  ../include/argpaser.hpp \
   /usr/local/include/gflags/gflags.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_uninitialized.h \
@@ -185,12 +186,89 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   /usr/local/include/gflags/gflags_declare.h \
-  /usr/local/include/gflags/gflags_gflags.h
+  /usr/local/include/gflags/gflags_gflags.h \
+  ../include/getImage.hpp \
+  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/x86_64-linux-gnu/curl/curl.h \
+  /usr/include/x86_64-linux-gnu/curl/curlver.h \
+  /usr/include/x86_64-linux-gnu/curl/system.h \
+  /usr/include/x86_64-linux-gnu/sys/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/x86_64-linux-gnu/bits/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+  /usr/include/x86_64-linux-gnu/asm/socket.h \
+  /usr/include/asm-generic/socket.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/x86_64-linux-gnu/asm/sockios.h \
+  /usr/include/asm-generic/sockios.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/curl/easy.h \
+  /usr/include/x86_64-linux-gnu/curl/multi.h \
+  /usr/include/x86_64-linux-gnu/curl/curl.h \
+  /usr/include/x86_64-linux-gnu/curl/urlapi.h \
+  /usr/include/x86_64-linux-gnu/curl/options.h
 
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/x86_64-linux-gnu/curl/curlver.h:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/local/include/gflags/gflags_declare.h:
 
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
 /usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -200,9 +278,13 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/local/include/gflags/gflags.h:
 
+/usr/include/limits.h:
+
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
+
+/usr/include/asm-generic/sockios.h:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
@@ -266,9 +348,15 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/endian.h:
 
+/usr/include/x86_64-linux-gnu/curl/multi.h:
+
+/usr/include/x86_64-linux-gnu/curl/curl.h:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/stdlib.h:
 
@@ -279,6 +367,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/ctype.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -291,6 +381,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/usr/include/x86_64-linux-gnu/curl/easy.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -312,9 +404,15 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/concept_check.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/linux/limits.h:
+
 /usr/include/stdint.h:
 
 /usr/include/c++/11/bits/exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -329,6 +427,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
 /usr/include/c++/11/bits/stl_algobase.h:
 
@@ -366,6 +466,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ios:
 
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/11/bits/char_traits.h:
@@ -384,15 +486,25 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/linux/stddef.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
+/usr/include/x86_64-linux-gnu/curl/system.h:
+
 /usr/include/c++/11/iosfwd:
+
+/usr/include/c++/11/bits/codecvt.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/bits/stl_function.h:
 
+/usr/include/asm-generic/posix_types.h:
+
 /usr/include/stdc-predef.h:
+
+../include/getImage.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -440,6 +552,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+../include/argpaser.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/string:
@@ -480,6 +594,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/localefwd.h:
 
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/locale.h:
@@ -491,6 +607,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/local/include/gflags/gflags_gflags.h:
 
 /usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/x86_64-linux-gnu/curl/urlapi.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
@@ -520,6 +638,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/usr/include/x86_64-linux-gnu/curl/options.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
@@ -529,6 +649,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/asm-generic/socket.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -549,6 +671,8 @@ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/11/bits/basic_string.h:
+
+/usr/include/c++/11/fstream:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 

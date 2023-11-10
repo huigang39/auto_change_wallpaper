@@ -93,6 +93,7 @@ auto_change_wallpaper_EXTERNAL_OBJECTS =
 auto_change_wallpaper: CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o
 auto_change_wallpaper: CMakeFiles/auto_change_wallpaper.dir/build.make
 auto_change_wallpaper: /usr/local/lib/libgflags.a
+auto_change_wallpaper: /usr/lib/x86_64-linux-gnu/libcurl.so
 auto_change_wallpaper: CMakeFiles/auto_change_wallpaper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/huigang39/workspace/auto_change_wallpaper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable auto_change_wallpaper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/auto_change_wallpaper.dir/link.txt --verbose=$(VERBOSE)

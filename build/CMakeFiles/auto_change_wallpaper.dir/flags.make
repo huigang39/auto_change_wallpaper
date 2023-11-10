@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DGFLAGS_IS_A_DLL=0
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/huigang39/workspace/auto_change_wallpaper/include
 
 CXX_FLAGS = -std=gnu++11
 
