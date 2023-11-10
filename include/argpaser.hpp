@@ -14,8 +14,9 @@
 
 #include <gflags/gflags.h>
 
-DEFINE_string(get, "get_default", "input file");
-DEFINE_string(add, "add_default", "input file");
-DEFINE_string(list, "list_default", "input file");
+DEFINE_string(url, "", "input file");
+DEFINE_string(name, "", "input file");
+DEFINE_string(add, "", "input file");
+DEFINE_string(list, "", "input file");
 
 #endif

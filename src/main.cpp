@@ -11,11 +11,13 @@
 
 #include <iostream>
 #include <argpaser.hpp>
-#include <getImage.hpp>
+#include <image.hpp>
 
 int main(int argc, char *argv[])
 {
+    google::InitGoogleLogging(argv[0]);
+    google::SetStderrLogging(google::INFO);
     google::ParseCommandLineFlags(&argc, &argv, true);
-    getImage img(FLAGS_get, "1.jpg");
+    Image image(FLAGS_url, FLAGS_name);
     return 0;
 }
