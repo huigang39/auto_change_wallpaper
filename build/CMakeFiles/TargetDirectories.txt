@@ -1,0 +1,3 @@
+/home/huigang39/workspace/auto_change_wallpaper/build/CMakeFiles/auto_change_wallpaper.dir
+/home/huigang39/workspace/auto_change_wallpaper/build/CMakeFiles/edit_cache.dir
+/home/huigang39/workspace/auto_change_wallpaper/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/auto_change_wallpaper.dir/src/main.cpp.o -o auto_change_wallpaper  /usr/local/lib/libgflags.a 
