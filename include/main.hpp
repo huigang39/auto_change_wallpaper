@@ -1,5 +1,5 @@
 /**
- * @file label.cpp
+ * @file main.hpp
  * @author Huigang Wang (huigang39@outlook.com)
  * @brief
  * @version 0.1
@@ -9,9 +9,12 @@
  *
  */
 
-#include <label.hpp>
+#ifndef __MAIN_HPP__
+#define __MAIN_HPP__
 
-void Label::addLabel()
-{
-    std::cout << "add label" << std::endl;
-}
+#include <acw.hpp>
+#include <image.hpp>
+#include <label.hpp>
+#include <argpaser.hpp>
+
+#endif

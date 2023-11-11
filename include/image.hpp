@@ -18,24 +18,41 @@
 #include <sstream>
 #include <fstream>
 #include <curl/curl.h>
-#include <glog/logging.h>
 
 class Image
 {
 private:
-    std::string filename;
-    std::string path = "../images";
+    std::string url;
+    std::string label;
+    std::string name;
+    std::string path;
 
     static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
 
 public:
-    Image(const std::string url, const std::string &filename);
-    ~Image();
-    void getImage(const std::string &url);
+    Image(const std::string &url, const std::string &label, const std::string &name, const std::string &path);
+
+    void getImage(const std::string &model);
     void setDefaultFileName();
-    void setPath(const std::string &path);
-    std::string getPath() const { return this->path; }
-    void setUserFileName(const std::string &filename);
+    void setUserFileName(const std::string &name);
+    const std::string labelTransfer(std::string &url, const std::string &label);
+};
+
+class ImageBuilder
+{
+private:
+    std::string url;
+    std::string label;
+    std::string name;
+    std::string path;
+
+public:
+    ImageBuilder &setUrl(const std::string &url);
+    ImageBuilder &setLabel(const std::string &label);
+    ImageBuilder &setName(const std::string &name);
+    ImageBuilder &setPath(const std::string &path);
+
+    Image build();
 };
 
 #endif

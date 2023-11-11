@@ -10,14 +10,14 @@
  */
 
 #include <iostream>
-#include <argpaser.hpp>
-#include <image.hpp>
+#include <main.hpp>
 
 int main(int argc, char *argv[])
 {
-    google::InitGoogleLogging(argv[0]);
-    google::SetStderrLogging(google::INFO);
+    // google::InitGoogleLogging(argv[0]);
+    // google::SetStderrLogging(google::INFO);
     google::ParseCommandLineFlags(&argc, &argv, true);
-    Image image(FLAGS_url, FLAGS_name);
+    Acw acw = AcwBuilder().setCmd(FLAGS_cmd).setUrl(FLAGS_url).setName(FLAGS_url).setPath(FLAGS_path).setLabel(FLAGS_label).build();
+    // Image img = ImageBuilder().setUrl("http://example.com/image.jpg").setFilename("my_image.jpg").setPath("/path/to/save/image").build();
     return 0;
 }

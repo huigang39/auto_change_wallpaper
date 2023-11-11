@@ -8,7 +8,9 @@ find_package(gflags REQUIRED)
 find_package(glog REQUIRED)
 find_package(CURL REQUIRED)
 
-add_executable(${PROJECT_NAME} src/main.cpp src/image.cpp)
+file(GLOB_RECURSE SRC_FILES src/*.cpp)
+
+add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 

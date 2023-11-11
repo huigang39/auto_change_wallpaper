@@ -11,34 +11,29 @@
 
 #include <image.hpp>
 
-Image::Image(const std::string url, const std::string &filename = "")
+Image::Image(const std::string &url, const std::string &label, const std::string &name, const std::string &path) : url(url), label(label), name(name), path(path)
 {
-    if (filename == "")
+    if (name == "")
     {
         setDefaultFileName();
-        LOG(INFO) << "NULL"
-                  << "\n";
     }
     else
     {
-        setUserFileName(filename);
+        setUserFileName(name);
     }
     getImage(url);
 }
 
-Image::~Image()
-{
-}
-
-void Image::getImage(const std::string &url)
+void Image::getImage(const std::string &model)
 {
     CURL *curl;
     CURLcode res;
     curl = curl_easy_init();
     if (curl)
     {
-        std::string fullpath = this->path + "/" + this->filename;
+        std::string fullpath = this->path + "/" + this->name;
         std::ofstream *fp = new std::ofstream(fullpath, std::ios::binary);
+        const std::string url = labelTransfer(this->url, this->label);
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
@@ -62,17 +57,35 @@ void Image::setDefaultFileName()
     auto now_c = std::chrono::system_clock::to_time_t(now);
     std::stringstream ss;
     ss << std::put_time(std::localtime(&now_c), "%Y%m%d%H%M%S");
-    this->filename = ss.str() + ".webp";
+    this->name = ss.str() + ".webp";
 }
 
-void Image::setPath(const std::string &path)
+void Image::setUserFileName(const std::string &name)
 {
-    this->path = path;
+    this->name = name + ".webp";
 }
 
-void Image::setUserFileName(const std::string &filename)
+const std::string Image::labelTransfer(std::string &url, const std::string &label)
 {
-    this->filename = filename + ".webp";
+    if (url == "" && label != "")
+    {
+        url = label;
+        return url;
+    }
+    else if (label == "" && url != "")
+    {
+        return url;
+    }
+    else
+    {
+        const std::string defaultUrl = "https://t.mwm.moe/pc/";
+        return defaultUrl;
+    }
+}
+
+Image ImageBuilder::build()
+{
+    return Image(url, label, name, path);
 }
 
 size_t Image::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
