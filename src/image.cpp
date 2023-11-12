@@ -11,19 +11,26 @@
 
 #include <image.hpp>
 
-Image::Image(const std::string &url, const std::string &label, const std::string &name, const std::string &path) : url(url), label(label), name(name), path(path)
+AcwImage::AcwImage(const std::string &url, const std::string &label, const std::string &name, const std::string &path) : url(url), label(label), name(name), path(path)
 {
+    LOG(INFO) << "User set url: " << this->url;
+    LOG(INFO) << "User set label: " << this->label;
+    LOG(INFO) << "User set file name: " << this->name;
+    LOG(INFO) << "User set path: " << this->path;
+
     if (name == "")
     {
+        // LOG(INFO) << "User set file name: " << this->name;
         setDefaultFileName();
     }
     else
     {
         setUserFileName(name);
+        // LOG(INFO) << "User set file name: " << this->name;
     }
 }
 
-void Image::getImage(const std::string &url)
+void AcwImage::getImage(const std::string &url)
 {
     CURL *curl;
     CURLcode res;
@@ -49,7 +56,7 @@ void Image::getImage(const std::string &url)
     }
 }
 
-void Image::setDefaultFileName()
+void AcwImage::setDefaultFileName()
 {
     auto now = std::chrono::system_clock::now();
     auto now_c = std::chrono::system_clock::to_time_t(now);
@@ -58,12 +65,12 @@ void Image::setDefaultFileName()
     this->name = ss.str() + ".webp";
 }
 
-void Image::setUserFileName(const std::string &name)
+void AcwImage::setUserFileName(const std::string &name)
 {
     this->name = name + ".webp";
 }
 
-const std::string Image::labelTransfer(std::string &url, const std::string &label)
+const std::string AcwImage::labelTransfer(std::string &url, const std::string &label)
 {
     if (url == "" && label != "")
     {
@@ -81,7 +88,7 @@ const std::string Image::labelTransfer(std::string &url, const std::string &labe
     }
 }
 
-size_t Image::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
+size_t AcwImage::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
     size_t realsize = size * nmemb;
     std::ofstream *fp = (std::ofstream *)userp;

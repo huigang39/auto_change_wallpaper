@@ -24,13 +24,15 @@ private:
     std::string path;
     std::string label;
 
-    Image img = Image(url, label, name, path);
+    AcwImage img = AcwImage(url, label, name, path);
+    AcwLabel lbl = AcwLabel(label);
 
 public:
     Acw(const std::string &cmd, const std::string &url, const std::string &name, const std::string &path, const std::string &label)
         : cmd(cmd), url(url), name(name), path(path), label(label) {}
     inline bool isCmdEqual(const std::string &cmd) { return this->cmd == cmd; };
     void getImage();
+    void addLabel();
 };
 
 class AcwBuilder

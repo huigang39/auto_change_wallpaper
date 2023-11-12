@@ -14,10 +14,11 @@
 
 int main(int argc, char *argv[])
 {
-    // google::InitGoogleLogging(argv[0]);
-    // google::SetStderrLogging(google::INFO);
+    google::InitGoogleLogging(argv[0]);
+    google::SetStderrLogging(google::INFO);
     google::ParseCommandLineFlags(&argc, &argv, true);
-    Acw acw = AcwBuilder().setCmd(FLAGS_cmd).setUrl(FLAGS_url).setName(FLAGS_url).setPath(FLAGS_path).setLabel(FLAGS_label).build();
+    Acw acw = AcwBuilder().setCmd(FLAGS_cmd).setUrl(FLAGS_url).setName(FLAGS_name).setPath(FLAGS_path).setLabel(FLAGS_label).build();
     acw.getImage();
+    acw.addLabel();
     return 0;
 }

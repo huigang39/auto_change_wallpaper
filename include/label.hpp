@@ -12,16 +12,17 @@
 #ifndef __LABEL_HPP__
 #define __LABEL_HPP__
 
-#include <iostream>
+#include <string>
+#include <sqlite3.h>
 
-class Label
+class AcwLabel
 {
 private:
-    /* data */
+    const std::string label;
+
 public:
-    Label(/* args */);
-    ~Label();
-    void addLabel();
+    AcwLabel(const std::string &label) : label(label){};
+    void addLabel(const std::string &label);
 };
 
 #endif

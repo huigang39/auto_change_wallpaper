@@ -10,8 +10,17 @@
  */
 
 #include <label.hpp>
+#include <glog/logging.h>
 
-void Label::addLabel()
+void AcwLabel::addLabel(const std::string &label)
 {
-    std::cout << "add label" << std::endl;
+    sqlite3 *db;
+    if (sqlite3_open("test.db", &db))
+    {
+        LOG(ERROR) << "Can't open database: " << sqlite3_errmsg(db);
+    }
+    else
+    {
+        LOG(INFO) << "Opened database successfully";
+    }
 }

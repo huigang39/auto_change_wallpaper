@@ -53,3 +53,11 @@ void Acw::getImage()
         img.getImage(img.labelTransfer(url, label));
     }
 }
+
+void Acw::addLabel()
+{
+    if (isCmdEqual("add"))
+    {
+        lbl.addLabel(label);
+    }
+}
