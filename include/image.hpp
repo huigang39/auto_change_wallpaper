@@ -32,27 +32,10 @@ private:
 public:
     Image(const std::string &url, const std::string &label, const std::string &name, const std::string &path);
 
-    void getImage(const std::string &model);
+    void getImage(const std::string &url);
     void setDefaultFileName();
     void setUserFileName(const std::string &name);
     const std::string labelTransfer(std::string &url, const std::string &label);
-};
-
-class ImageBuilder
-{
-private:
-    std::string url;
-    std::string label;
-    std::string name;
-    std::string path;
-
-public:
-    ImageBuilder &setUrl(const std::string &url);
-    ImageBuilder &setLabel(const std::string &label);
-    ImageBuilder &setName(const std::string &name);
-    ImageBuilder &setPath(const std::string &path);
-
-    Image build();
 };
 
 #endif

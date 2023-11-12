@@ -18,6 +18,6 @@ int main(int argc, char *argv[])
     // google::SetStderrLogging(google::INFO);
     google::ParseCommandLineFlags(&argc, &argv, true);
     Acw acw = AcwBuilder().setCmd(FLAGS_cmd).setUrl(FLAGS_url).setName(FLAGS_url).setPath(FLAGS_path).setLabel(FLAGS_label).build();
-    // Image img = ImageBuilder().setUrl("http://example.com/image.jpg").setFilename("my_image.jpg").setPath("/path/to/save/image").build();
+    acw.getImage();
     return 0;
 }

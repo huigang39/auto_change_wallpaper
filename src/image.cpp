@@ -21,10 +21,9 @@ Image::Image(const std::string &url, const std::string &label, const std::string
     {
         setUserFileName(name);
     }
-    getImage(url);
 }
 
-void Image::getImage(const std::string &model)
+void Image::getImage(const std::string &url)
 {
     CURL *curl;
     CURLcode res;
@@ -33,7 +32,6 @@ void Image::getImage(const std::string &model)
     {
         std::string fullpath = this->path + "/" + this->name;
         std::ofstream *fp = new std::ofstream(fullpath, std::ios::binary);
-        const std::string url = labelTransfer(this->url, this->label);
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
@@ -81,11 +79,6 @@ const std::string Image::labelTransfer(std::string &url, const std::string &labe
         const std::string defaultUrl = "https://t.mwm.moe/pc/";
         return defaultUrl;
     }
-}
-
-Image ImageBuilder::build()
-{
-    return Image(url, label, name, path);
 }
 
 size_t Image::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)

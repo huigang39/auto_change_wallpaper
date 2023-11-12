@@ -45,3 +45,11 @@ Acw AcwBuilder::build()
 {
     return Acw(cmd, url, name, path, label);
 }
+
+void Acw::getImage()
+{
+    if (isCmdEqual("get"))
+    {
+        img.getImage(img.labelTransfer(url, label));
+    }
+}
